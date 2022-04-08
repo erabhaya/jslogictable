@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js logic table</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Js Logic Table </h1>
+    <div class="main">
+      <label for="id">Product ID</label>
+      <input type="text" id="pid" /><br />
+
+      <label for="id">Product Name</label>
+      <input type="text" id="pname" /><br />
+
+      <label for="id">Product Price</label>
+      <input type="text" id="pprice" /><br />
+
+      <button onclick="add()" value="submit">ADD Product</button>
+    </div>
+    <div class="footer" id="feet"></div>
+
+    <script>
+      var a = [];
+      function add() {
+        var b = document.getElementById("pid").value;
+        var c = document.getElementById("pname").value;
+        var d = document.getElementById("pprice").value;
+
+        var z = { productid: b, productname: c, productprice: d };
+        a.push(z);
+        console.log(a);
+        Display();
+      }
+      function Display() {
+        html ="<table><tr><th>Product Id</th><th>productname</th><th>productprice</th><tr>";
+
+            a.forEach(element => {
+                html+="<tr><td>"+element.productid+"</td><td>"+element.productname+"</td><td>"+element.productprice+"</td></tr>"
+            });
+            html+="<table>"
+            document.getElementById('feet').innerHTML=html;
+            document.getElementById("pid").value="";
+            document.getElementById("pname").value="";
+            document.getElementById("pprice").value="";
+        }
+      
+    </script>
+  </body>
+</html>
