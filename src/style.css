@@ -1,40 +1,66 @@
-*{
-    margin: 0%;
-    padding: 0%;
-}
 body{
-    margin: 10px 10px;
-    padding: 10%;
-}
-#pid{
-    margin: 10px auto;
-}
-#pname{
-    margin: 10px auto;
-}
-#pprice{
-    margin: 10px auto;
+	font-family: Arial;
+	font-size: 80%;
 }
 
-button{
-    width: 30%;
-    height: 50px;
+#wrapper{
+	width: 80%;
+	margin: 20px auto 0;
 }
-.main{
-    border: 2px solid black;
-    margin: 10px auto; padding: 10px;
-    width: 400px;
-    height: 300px;
+
+#add_product_form label{
+	display: block;
+	margin-top: 10px;
 }
-input{
-    width: 250px; height: 40px;
+
+#add_product_form label span{
+	width: 150px;
+	display: inline-block;
 }
-th,td{
-    padding: 20px;
+
+#add_product_form .submit{
+	margin-top: 40px;
 }
-table{
-    margin: 10px auto;
+
+#add_product_form .submit input[type="button"]{
+	border-radius: 5px;
+	border: 1px solid #eeeeee;
+	padding: 10px;
 }
-h1{
-    text-align: center;
+
+#notification > div{
+	padding: 10px;
+	font-weight: bold;
+	border-radius: 5px;
+	margin-bottom: 20px;
+	position: relative;
+}
+
+#notification .close{
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	text-decoration: none;
+}
+
+#notification .success{
+	border: 1px solid green;
+	background: #7ED47E;
+}
+
+#notification .error{
+	border: 1px solid red;
+	background: #FF5733;
+}
+
+#product_list .delete{
+	margin-left: 10px;
+}
+
+#product_list table{
+	width: 400px;
+}
+
+#product_list table th{
+	text-align: left;
 }
